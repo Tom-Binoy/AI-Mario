@@ -1,19 +1,37 @@
-body
-{
-    background-image: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg;");
+.div{
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    top: 0;
+}
+#heading{
+    font-family: monospace;
+    display: inline;
+}
+#modalbtn{
+    top:10;
+    right: 10px;
+    position:fixed;
+}
+#start{
+    font-size: 30px;
+}
+.status{
+    font-size: 20px;
+    background-color: rgb(162, 162, 14);
+}
+.image{
+    display: inline;
+    width: 48%;
+}
+.footer{
+    background-color: brown;
+    width: 100%;
+    color: blue;
+}
+video{
+    background-image: url("game_console.png");
     background-size: cover;
-}
-
-.title
-{
-    background-color:burlywood;
-    bottom: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.in
-{
-    float:right;
-    height:40px;
-    top:10px;
+    background-position: center;
+    padding: 60px;
 }
