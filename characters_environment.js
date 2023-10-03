@@ -221,6 +221,7 @@ function getCoins(coin,character){
   if( character.overlap(coin) && character.live && coin.get==false){
     character.coins+=1;
     coin.get=true;
+    coinfx.play()
   };
 }
     
@@ -310,6 +311,7 @@ function manualControl(character){
 function jumping(character){
 	if( (nosey<201 &&character.live) || (touchIsDown&&character.live) ){
 		character.velocity.y+=gameConfig.jump;
+    jumpfx.play()
 	}
 }
 
@@ -359,6 +361,7 @@ function StepOnEnemy(obj1,obj2){
 		obj2.live=false;
     obj1.killing=30;
     obj1.kills++;
+    kickfx.play()
     if(obj1.velocity.y>=gameConfig.jump*0.8){
       obj1.velocity.y=gameConfig.jump*0.8;
     }else{
@@ -376,6 +379,9 @@ function die(character){
     character.status="dead";
     character.changeAnimation('dead');
     character.velocity.y-=2;
+    if(character.liveNumber != 0){
+      diefx.play()
+    }
 }
 
 // check character status and response to sprite and game status
@@ -387,6 +393,7 @@ function checkStatus(character){
   }
   if(character.live==false && character.liveNumber==0){
     gameConfig.status="gameover"
+    gameoverfx.play()
   }
 
 }
